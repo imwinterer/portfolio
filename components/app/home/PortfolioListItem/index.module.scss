@@ -1,0 +1,88 @@
+.link{
+  @media (any-hover: hover){
+    .eyecatch{
+      img{
+        transition: transform .3s;
+      }
+    }
+    &:hover{
+      .eyecatch{
+        img{
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+.eyecatch {
+  background: #e5e5e5;
+  .eyecatch-inner{
+    padding: calc(30 / 1920 * 100vw);
+    aspect-ratio: 1/1;
+    clip-path: inset(100% 0% 0% 0%);
+    background: #F7F2EC;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(calc(5 / 1920 * 100vw) calc(5 / 1920 * 100vw) calc(10 / 1920 * 100vw) rgba(#000, .15));
+      will-change: filter;
+      @media screen and (max-width: 1024px){
+        filter: drop-shadow(calc(5 / 768 * 100vw) calc(5 / 768 * 100vw) calc(10 / 768 * 100vw) rgba(#000, .15));
+      }
+    }
+  }
+}
+
+.content{
+  padding: calc(15 / 1920 * 100vw) calc(10 / 1920 * 100vw) 0;
+  @media screen and (max-width: 1024px){
+    padding: calc(15 / 768 * 100vw) calc(10 / 768 * 100vw) 0;
+  }
+}
+
+.title{
+  font-size: 1.8rem;
+  line-height: 180%;
+  letter-spacing: .06em;
+  @media screen and (max-width: 1024px){
+    font-size: 2.4rem;
+  }
+}
+
+.category,
+.tag,
+.date{
+  margin-top: calc(15 / 1920 * 100vw);
+  @media screen and (max-width: 1024px){
+    margin-top: calc(15 / 768 * 100vw);
+  }
+  > p{
+    font-size: 1.0rem;
+    line-height: 180%;
+    letter-spacing: .04em;
+    @media screen and (max-width: 1024px){
+      font-size: 1.2rem;
+    }
+  }
+  > div{
+    span{
+      font-size: 1.4rem;
+      line-height: 180%;
+      letter-spacing: .04em;
+      display: inline;
+      @media screen and (max-width: 1024px){
+        font-size: 1.8rem;
+      }
+      &::after{
+        content: " / ";
+      }
+      &:last-of-type{
+        &::after{
+          content: "";
+        }
+      }
+    }
+  }
+}

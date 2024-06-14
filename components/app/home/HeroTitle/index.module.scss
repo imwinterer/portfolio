@@ -1,0 +1,34 @@
+.title {
+  font-family: var(--font-viaoda_libre);
+  font-weight: 400;
+  font-size: 16.0rem;
+  line-height: 1;
+  letter-spacing: .08em;
+  position: relative;
+  z-index: 2;
+  @media screen and (max-width: 1024px) {
+    font-size: 10.0rem;
+  }
+  
+  opacity: 0;
+  filter: blur(1.5rem);
+  will-change: filter;
+}
+
+.svg{
+  width: calc(600 / 1920 * 100vw);
+  height: calc(142 / 1920 * 100vw);
+  position: absolute;
+  top: calc(52 / 1920 * -100vw);
+  left: calc(105 / 1920 * -100vw);
+  @media screen and (max-width: 1024px) {
+    width: calc(321 / 768 * 100vw);
+    height: calc(76 / 768 * 100vw);
+    top: calc(25 / 768 * -100vw);
+    left: calc(58 / 768 * -100vw);
+  }
+}
+
+.text{
+  position: relative;
+}
