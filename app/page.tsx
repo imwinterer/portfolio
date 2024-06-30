@@ -7,7 +7,7 @@ export default async function Home() {
   const data = await getAllContents({
     limit: 1,
     offset: 0,
-    orders: 'publishedAt',
+    orders: '-system:default',
   });
 
   return (
