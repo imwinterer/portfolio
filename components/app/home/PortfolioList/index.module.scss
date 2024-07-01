@@ -9,9 +9,9 @@
 .list{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: calc(40/ 1920 * 100vw) calc(2/ 1920 * 100vw);
+  gap: calc(80/ 1920 * 100vw) calc(2/ 1920 * 100vw);
   @media screen and (max-width: 1024px){
-    grid-template-columns: repeat(2, 1fr);
-    gap: calc(80/ 768 * 100vw) calc(2/ 768 * 100vw);
+    grid-template-columns: 1fr;
+    gap: calc(120/ 768 * 100vw) calc(2/ 768 * 100vw);
   }
 }

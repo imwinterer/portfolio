@@ -8,6 +8,8 @@ import type {
   MicroCMSListResponse
 } from 'microcms-js-sdk';
 
+import { notFound } from 'next/navigation';
+
 // タグの型定義
 export type Tag = {
   name: string;
@@ -32,6 +34,7 @@ export type Works = {
   category?: Category;
   tag?: Tag[];
   date?: string;
+  content: string;
 };
 
 
@@ -69,4 +72,17 @@ export const getAllContents = async(queries: MicroCMSQueries): Promise<MicroCMSL
   }
 
   return listData;
+};
+
+
+export const getDetail = async (contentId: string, queries?: MicroCMSQueries) => {
+  const detailData = await client
+    .getListDetail<Works>({
+      endpoint: 'works',
+      contentId,
+      queries,
+    })
+    .catch(notFound);
+
+  return detailData;
 };
