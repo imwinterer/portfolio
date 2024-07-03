@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
 import { Suspense } from 'react';
@@ -41,6 +42,7 @@ export default function RootLayout({
           <Footer />
         </Suspense>
         <Analytics />
+        <GoogleAnalytics gaId="G-VM6P2PVL84" />
       </body>
     </html>
   );
